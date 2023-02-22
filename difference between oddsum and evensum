@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int oddsum=0,evensum=0,n,i,k,result;
+
+    printf("Enter the max_number: ");
+    scanf("%d",&n);
+    printf("Enter the k value: ");
+    scanf("%d",&k);
+    i=1;
+    while(i<=n)
+    {
+        if(i%k==0)
+        {
+            printf("%d\n",i);
+
+            if(i%2==0)
+            evensum=evensum+i;
+            else
+            oddsum=oddsum+i;
+        }
+     i++;
+    }
+    result=evensum-oddsum;
+    printf("Even sum = %d \n Odd sum = %d\n",evensum,oddsum);
+    printf("result= %d\n",result);
+
+    return 0;
+}
